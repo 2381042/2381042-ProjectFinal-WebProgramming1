@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Photos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="favicon.ico">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-blue': {
+                            DEFAULT: '#001845',
+                            '50': '#f0f4fc',
+                            '100': '#e0ebf9',
+                            '200': '#c1d7f2',
+                            '300': '#90baea',
+                            '400': '#5a9cde',
+                            '500': '#3382d0',
+                            '600': '#2269b3',
+                            '700': '#1d5591',
+                            '800': '#1a4777',
+                            '900': '#001845'
+                        }
+                    },
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-custom-blue-900 text-white font-roboto">
+    <nav class="bg-custom-blue-800 shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-end space-x-4">
+                <a href="index.html" class="text-white hover:text-custom-blue-50 transition duration-300">HomePage</a>
+                <a href="biodata.html" class="text-white hover:text-custom-blue-50 transition duration-300">About Me</a>
+                <a href="gallery.html" class="text-white hover:text-custom-blue-50 transition duration-300">FreePage</a>
+                <a href="contact_us.html" class="text-white hover:text-custom-blue-50 transition duration-300">Contact Us</a>
+                <a href="posts.html" class="text-white no-underline mx-2 text-sm">Post Additional</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-white mb-4">Gallery Photos</h1>
+            <p class="text-custom-blue-50 max-w-2xl mx-auto text-lg">
+                Welcome to our photo gallery! This is a gallery where we store photos of animals that might make you laugh for a moment so you can get rid of the thoughts that make your brain tired. We hope that by looking at these photos, it can make you entertained, thank you for visiting our website!
+            </p>
+        </header>
+
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="gallery-item group">
+                <div class="overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <img src="pictures/What me and my bestie look like.jpg" alt="Gambar 1"
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:brightness-110">
+                </div>
+            </div>
+            <div class="gallery-item group">
+                <div class="overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <img src="pictures/bb12364f-2725-4fc3-8f6b-b0d99d2ef700.jpg" alt="Gambar 2" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:brightness-110">
+                </div>
+            </div>
+            <div class="gallery-item group">
+                <div class="overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <img src="pictures/Sus cat.jpg" alt="Gambar 11" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:brightness-110">
+                </div>
+            </div>
+            <div class="gallery-item group">
+                <div class="overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <img src="pictures/Pin by Мелл on mem _ Hewan, Humor hewan, Hewan….jpg" alt="Gambar 12" 
+                         class="w-full h-64 object-cover transition-transform duration-300 group-hover:brightness-110">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer grid max-w-3xl mx-auto grid-cols-1 md:grid-cols-2 gap-5 p-5 text-center">
+        <div class="logo text-2xl font-bold text-left">SIEMENS</div>
+        <div class="social-icons flex justify-start gap-2">
+            <a href="#" class="text-white text-2xl"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="text-white text-2xl"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-white text-2xl"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white text-2xl"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="text-white text-2xl"><i class="fab fa-instagram"></i></a>
+        </div>
+        <a href="#" class="contact-us border-2 border-white rounded-md py-2 px-4 text-white text-lg font-bold">Contact us <i class="fas fa-envelope"></i></a>
+        <div class="legal-links flex justify-end gap-2">
+            <a href="https://fti.unai.edu/" class="text-white text-sm">FTI UNAI</a>
+            <a href="https://unai.edu/" class="text-white text-sm">UNAI</a>
+            <a href="https://jurnal.unai.edu/index.php/teika" class="text-white text-sm">Jurnal Teika</a>
+            <a href="#" class="text-white text-sm">Terms of use</a>
+            <a href="#" class="text-white text-sm">Digital ID</a>
+            <a href="#" class="text-white text-sm">Whistleblowing</a>
+        </div>
+        <div class="copyright text-sm text-left">© Siemens 1996 - 2024</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Index Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    </style>
+</head>
+<body class="m-0 p-0 font-['Roboto'] text-white bg-[#001845]">
+    <div class="header1 bg-[#001845] p-2 flex justify-end">
+        <div class="header">
+            <a href="index.html" class="text-white no-underline mx-2 text-sm">HomePage</a>
+            <a href="biodata.html" class="text-white no-underline mx-2 text-sm">About Me</a>
+            <a href="gallery.html" class="text-white no-underline mx-2 text-sm">FreePage</a>
+            <a href="contact_us.html" class="text-white no-underline mx-2 text-sm">Contact Us</a>
+            <a href="posts.html" class="text-white no-underline mx-2 text-sm">Post Additional</a>
+        </div>
+    </div>
+    <div class="w-11/12 max-w-lg mx-auto p-5 rounded-lg shadow-md bg-white">
+        <header class="text-center mb-5">
+            <h1 class="text-black text-2xl">Student Registration Form</h1>
+        </header>
+    
+        <form action="#" method="post" class="flex flex-col p-5">
+            <div class="mb-5">
+                <label for="full-name" class="block mb-2 text-black">Full Name:</label>
+                <input  placeholder="Enter your full name" type="text" id="first-name" name="first-name" required class="w-full p-2 border border-gray-300 rounded-lg text-black">
+            </div>
+    
+            <div class="mb-5">
+                <label for="phone-number" class="block mb-2 text-black">Phone Number</label>
+                <input placeholder="Enter your phone number" type="text" id="family-name" name="family-name" required class="w-full p-2 border border-gray-300 rounded-lg text-black">
+            </div>
+    
+            <div class="mb-5">
+                <label for="email" class="block mb-2 text-black">Email:</label>
+                <input  placeholder="Enter your email" type="email" id="email" name="email" required class="w-full p-2 border border-gray-300 rounded-lg text-black">
+            </div>
+    
+           <div class="mb-5">
+                <label for="Student-ID" class="block mb-2 text-black">Student ID(NIM):</labeXl>
+                <input placeholder="Enter your NIM"  type="text" id="username" name="username" required class="w-full p-2 border border-gray-300 rounded-lg text-black">
+            </div>
+    
+            
+    
+           <div class="mb-5">
+                <label class="block mb-2 text-black">Gender:</label>
+                <div class="flex items-center gap-5">
+                    <div>
+                        <input type="radio" id="male" name="gender" value="male" required class="mr-2">
+                        <label for="male" class="text-black">Male</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="female" name="gender" value="female" required class="mr-2">
+                        <label for="female" class="text-black">Female</label>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="mb-5">
+                <label for="birthdate" class="block mb-2 text-black">Birthdate:</label>
+                <input type="date" id="birthdate" name="birthdate" required class="w-full p-2 border border-gray-300 rounded-lg text-black">
+            </div>
+    
+
+            <div class="mb-5">
+                <label for="faculty" class="block mb-2 text-black">Faculty/Major:</label>
+                <select 
+                    id="faculty" 
+                    name="faculty" 
+                    required 
+                    class="w-full p-2 border border-gray-300 rounded-lg text-black 
+                           focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                    <option value="">Select your Faculty/Major</option>
+                    
+                    <optgroup label="Informatics Engineering">
+                        <option value="informatics-engineering-s1">Informatics Engineering (S1)</option>
+                        <option value="informatics-engineering-d3">Informatics Engineering (D3)</option>
+                    </optgroup>
+                    
+                    <optgroup label="Information Systems">
+                        <option value="information-systems-s1">Information Systems (S1)</option>
+                        <option value="information-systems-d3">Information Systems (D3)</option>
+                    </optgroup>
+                   
+                    <optgroup label="Other">
+                        <option value="not-fti-student">Not an FTI Student</option>
+                    </optgroup>
+                </select>
+            </div>
+            
+            <div id="other-faculty-container" class="mb-5 hidden">
+                <label for="other-faculty" class="block mb-2 text-black">Specify Your Faculty/Major:</label>
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        id="other-faculty" 
+                        name="other-faculty" 
+                        placeholder="Enter your Faculty/Major" 
+                        class="w-full p-2 pr-10 border border-gray-300 rounded-lg text-black 
+                               focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                    <span id="other-faculty-validation-icon" class="absolute right-3 top-3 text-gray-400">
+                        <!-- Icon akan berubah secara dinamis -->
+                    </span>
+                </div>
+                <p id="other-faculty-error" class="text-sm text-red-500 mt-1 hidden">
+                    Please enter a valid faculty/major
+                </p>
+            </div>
+    
+            <div class="mb-5">
+                <label for="address" class="block mb-2 text-black">Address:</label>
+                <textarea id="address" name="address" rows="4" required class="w-full p-2 border border-gray-300 rounded-lg text-black"></textarea>
+            </div>
+    
+           
+    
+            <div>
+                <button type="submit" class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Submit Registration</button>
+            </div>
+        </form>
+    </div>
+    <div class="footer grid max-w-3xl mx-auto grid-cols-1 md:grid-cols-2 gap-5 p-5 text-center">
+        <div class="logo text-2xl font-bold text-left">SIEMENS</div>
+        <div class="social-icons flex justify-start gap-2">
+            <a href="#" class="text-white text-2xl"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="text-white text-2xl"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-white text-2xl"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white text-2xl"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="text-white text-2xl"><i class="fab fa-instagram"></i></a>
+        </div>
+        <a href="#" class="contact-us border-2 border-white rounded-md py-2 px-4 text-white text-lg font-bold">Contact us <i class="fas fa-envelope"></i></a>
+        <div class="legal-links flex justify-end gap-2">
+            <a href="https://fti.unai.edu/" class="text-white text-sm">FTI UNAI</a>
+            <a href="https://unai.edu/" class="text-white text-sm">UNAI</a>
+            <a href="https://jurnal.unai.edu/index.php/teika" class="text-white text-sm">Jurnal Teika</a>
+            <a href="#" class="text-white text-sm">Terms of use</a>
+            <a href="#" class="text-white text-sm">Digital ID</a>
+            <a href="#" class="text-white text-sm">Whistleblowing</a>
+        </div>
+        <div class="copyright text-sm text-left">© Siemens 1996 - 2024</div>
+    </div>
+</body>
+</html>
+    
